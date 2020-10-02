@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/star.css" />
+    <link rel="stylesheet" href="styles/users.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <ul>
+      <li id="canvas">canvas</li>
+      |
+      <li id="table">table</li>
+    </ul>
+
+    <div class="canvas-block">
+      <canvas id="big-canvas" width="600" height="600">
+        Your browser does not support the canvas element.
+      </canvas>
+      <canvas id="small-canvas"> Your browser does not support the canvas element. </canvas>
+    </div>
+
+    <div class="table-block">
+      <div class="table-block-wrapper">
+        <table id="users-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>8650876341</td>
+              <td class="users-table-actions">
+                <button onclick="UsersManager.editRow(this)">Edit</button>
+                <button onclick="UsersManager.deleteRow(this)">Remove</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Sam</td>
+              <td>8650876342</td>
+              <td class="users-table-actions">
+                <button onclick="UsersManager.editRow(this)">Edit</button>
+                <button onclick="UsersManager.deleteRow(this)">Remove</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Mike</td>
+              <td>8650876343</td>
+              <td class="users-table-actions">
+                <button onclick="UsersManager.editRow(this)">Edit</button>
+                <button onclick="UsersManager.deleteRow(this)">Remove</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Kate</td>
+              <td>8650876344</td>
+              <td class="users-table-actions">
+                <button onclick="UsersManager.editRow(this)">Edit</button>
+                <button onclick="UsersManager.deleteRow(this)">Remove</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <p>Add new user</p>
+        <div class="add-user">
+          <span>
+            <input id="new-name" type="text" placeholder="Name" />
+            <p class="name-err"></p>
+          </span>
+          <span>
+            <input id="new-phone" type="text" placeholder="Phone +xx-xxxx-xxxx" />
+            <p class="phone-err"></p>
+          </span>
+          <button class="add-user-btn">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/main.js" defer></script>
+    <script src="src/star.js" defer></script>
+    <script src="src/starMgr.js" defer></script>
+    <script src="src/users.js" defer></script>
+  </body>
+</html>

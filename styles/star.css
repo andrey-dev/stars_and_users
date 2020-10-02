@@ -1,0 +1,18 @@
+.canvas-block {
+  height: 656px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#big-canvas {
+  width: 600px;
+  height: 600px;
+  border: 1px solid #c3c3c3;
+}
+
+#small-canvas {
+  width: 600px;
+  height: 50px;
+  border: 1px solid #c3c3c3;
+}
